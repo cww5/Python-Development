@@ -33,18 +33,25 @@ def generate_number(low=0, high=20):
 
 
 def play_game(player_name, num_guesses, ai_number):
+    user_correct = False
     for i in range(num_guesses):
         user_guess = ask_user_for_number_of('your guess', player_name)
         dist = abs(abs(user_guess) - abs(ai_number))
-        if 6 > dist > 0:
+        try_again = 'Try again.'
+        if i == (num_guesses - 1):
+            try_again = ''
+        if (6 > dist > 0) and i < (num_guesses - 1):
             print('You are getting closer...')
         if user_guess > ai_number:
-            print('You are too high! Try again.')
+            print('You are too high! {}'.format(try_again))
         elif user_guess < ai_number:
-            print('You are too low! Try again.')
+            print('You are too low! {}'.format(try_again))
         else:
             print('You got it correct!')
+            user_correct = True
             break
+    if not user_correct:
+        print('Sorry, the number I was thinking of was: {}'.format(ai_number))
 
 
 def main():
