@@ -1,4 +1,35 @@
 # this script highlights some interesting notes that I wasn't aware of prior to the udemy course
+
+'''
+All Python scripts should start with the following:
+#! <>
+Windows: python3
+Mac: /usr/env/bin/python3
+Linux: /usr/bin/python3
+
+on Windows, shebang line is not needed unless you have multiple versions of Python
+Win+R py \path\to\script.py
+
+
+batch file XXX.bat
+@py C:\path\to\script.py %*
+@pause
+
+@ tells windows (don't display the line just do it)
+%* means forward and cmd args to the script
+
+@pyw will run a script without a script
+
+edit PATH - add folder which has all executable python scripts and .bat files
+then Win+R XXX (don't need full path or .bat extension)
+
+Win+R XXX arg1 arg2 arg3 (when using sys.argv)
+this passes the arguments to the batch file
+but the %* in the batch file forwards them to the python script
+
+
+'''
+
 import copy
 import pprint
 
