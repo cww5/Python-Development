@@ -32,6 +32,7 @@ but the %* in the batch file forwards them to the python script
 
 import copy
 import pprint
+import re
 
 
 def list_notes():
@@ -74,8 +75,58 @@ def string_fun():
     'hello'.center(20)
 
 
+def regex_basics(message):
+    print('regex stuff')
+    phoneNumberRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+    # find the regex in message
+    # if search can't find, then it returns None
+    matchObject = phoneNumberRegex.search(message)
+    # show the first result
+    print('first group matched:', matchObject.group())
+    # show all results
+    print('findall', phoneNumberRegex.findall(message))
+
+
+def regex_groups(message):
+    # parentheses separate different groups of regex searches
+    phoneNumberRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+    mo = phoneNumberRegex.search(message)
+    print('group 1:', mo.group(1))
+    print('group 2:', mo.group(2))
+
+    # \( and \) would allow us to look up for literally ()
+    # | separates all possible options
+    batRegex = re.compile(r'bat(man|boy|mobile|wing|copter)')
+    mo = batRegex.search('Batman rides the batwing to the batmobile')
+    print('bat thing found:', mo.group())
+    # to get the particular suffix found within that group:
+    print('bat thing found:', mo.group(1))
+
+
+def is_phone_number(text):
+    # expects a valid phone number to be XXX-XXX-XXXX
+    if len(text) != 12:
+        return False
+    for i in range(len(text)):
+        if i in (3, 7):
+            if text[i] == '-':
+                continue
+            else:
+                return False
+        if not text[i].isdecimal():
+            return False
+    return True
+
+
 def main():
     print('we\'re in main')
+    num1 = '656-435-3452'
+    num2 = '1-' + num1
+    print('Is {} a phone number?: {}'.format(num1, is_phone_number(num1)))
+    print('Is {} a phone number?: {}'.format(num2, is_phone_number(num2)))
+    message = 'Call me at 415-324-2342 for mobile, 313-234-2345 for work'
+    regex_basics(message)
+    regex_groups(message)
 
 
 if __name__ == '__main__':
