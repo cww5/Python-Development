@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210310 - added notes on batch file automation">
+    <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210311 - added notes on regex basics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes.py" afterDir="false" />
     </list>
@@ -134,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615478678032</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="20210311 - added notes on regex basics">
+      <created>1615496296536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615496296536</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +159,7 @@
     <MESSAGE value="20210310 - finished game with adjusted messages" />
     <MESSAGE value="20210310 - added script for note taking" />
     <MESSAGE value="20210310 - added notes on batch file automation" />
-    <option name="LAST_COMMIT_MESSAGE" value="20210310 - added notes on batch file automation" />
+    <MESSAGE value="20210311 - added notes on regex basics" />
+    <option name="LAST_COMMIT_MESSAGE" value="20210311 - added notes on regex basics" />
   </component>
 </project>

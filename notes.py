@@ -103,6 +103,24 @@ def regex_groups(message):
     print('bat thing found:', mo.group(1))
 
 
+def regex_greedy_nongreedy_matching(message):
+    # ? means 0 or 1 times but \? is literal question mark
+    batRegex1 = re.compile(r'bat(man|woman)')
+    batRegex2 = re.compile(r'batman|batwoman')
+    batRegex1 = re.compile(r'bat(wo)?man|woman')
+    # batwowowoman will not match
+
+    phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d')
+    mo = phoneRegex.search('234-234-2345 and 234-1345')
+    print(mo.group())
+
+    # * means 0 or more times \* is a literal *
+    # + means 1 or more times \+ is a literal +
+    # X{N} means match expression X exactly N times
+    # X{x,y} means match expression X at least x, at most y times
+    # x or y are optional like list slicing
+
+
 def is_phone_number(text):
     # expects a valid phone number to be XXX-XXX-XXXX
     if len(text) != 12:
@@ -127,7 +145,7 @@ def main():
     message = 'Call me at 415-324-2342 for mobile, 313-234-2345 for work'
     regex_basics(message)
     regex_groups(message)
-
+    regex_greedy_nongreedy_matching(message)
 
 if __name__ == '__main__':
     main()
