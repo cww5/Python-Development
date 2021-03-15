@@ -75,6 +75,21 @@ def string_fun():
     'hello'.center(20)
 
 
+def is_phone_number(text):
+    # expects a valid phone number to be XXX-XXX-XXXX
+    if len(text) != 12:
+        return False
+    for i in range(len(text)):
+        if i in (3, 7):
+            if text[i] == '-':
+                continue
+            else:
+                return False
+        if not text[i].isdecimal():
+            return False
+            return True
+
+
 def regex_basics(message):
     print('regex stuff')
     phoneNumberRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
@@ -120,21 +135,27 @@ def regex_greedy_nongreedy_matching(message):
     # X{x,y} means match expression X at least x, at most y times
     # x or y are optional like list slicing
 
+    # find the longest possible string
+    digitRegex = re.compile(r'(\d){3,5}')
+    mo = digitRegex.search('1234567890')
+    print('Greedy digit search:', mo.group())
 
-def is_phone_number(text):
-    # expects a valid phone number to be XXX-XXX-XXXX
-    if len(text) != 12:
-        return False
-    for i in range(len(text)):
-        if i in (3, 7):
-            if text[i] == '-':
-                continue
-            else:
-                return False
-        if not text[i].isdecimal():
-            return False
-    return True
+    # non greedy - find the shortest possible string
+    digitRegex = re.compile(r'(\d){3,5}?')
+    mo = digitRegex.search('1234567890')
+    print('NONGreedy digit search:', mo.group())
 
+
+def regex_find_all(message):
+    phoneRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+    nums = phoneRegex.findall(message) # return a list of all matches in message
+    print(nums)
+    phoneRegex2 = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+    groups2 =  phoneRegex2.findall(message) # return a list of all matches in message
+    print(groups2)
+    phoneRegex3 = re.compile(r'((\d\d\d)-(\d\d\d-\d\d\d\d))')
+    groups3 = phoneRegex3.findall(message)  # return a list of all matches in message
+    print(groups3)
 
 def main():
     print('we\'re in main')
@@ -146,6 +167,7 @@ def main():
     regex_basics(message)
     regex_groups(message)
     regex_greedy_nongreedy_matching(message)
+    regex_find_all(message)
 
 if __name__ == '__main__':
     main()
