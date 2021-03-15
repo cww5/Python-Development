@@ -169,6 +169,51 @@ def regex_character_classes(message):
 
 
     '''
+    xmasRegex = re.compile(r'\d+\s\w+')
+    print(xmasRegex.findall(message))
+    vowelRegex = re.compile(r'[aeiouAEIOU]')
+    print(vowelRegex.findall(message))
+    vowelRegex = re.compile(r'[aeiouAEIOU]{2}') #2 vowels in a row lEAping
+    print(vowelRegex.findall(message))
+    notVowelRegex = re.compile(r'[^aeiouAEIOU]')
+    print(notVowelRegex.findall(message))
+
+
+def regex_dotstar(message):
+    starts_with_hello = re.compile(r'^Hello')
+    ends_with_world = re.compile(r'world$')
+    hello_world_exact = re.compile(r'^Hello world$')
+    # . means any character except new line
+    # .* means literally any pattern that doesn't include new line
+    sent = 'First Name: Tony Last Name: Stark'
+    sent_regex = re.compile(r'First Name: (.*) Last Name: (.*)')
+    print(sent_regex.findall(sent))
+    another_sent = '<To serve humans> for dinner...>'
+    nongreedy = re.compile(r'<(.*?)>', re.IGNORECASE)
+    greedy = re.compile(r'<(.*)>', re.DOTALL) # * means even \n
+    print(nongreedy.findall(another_sent))
+    print(greedy.findall(another_sent))
+
+
+def regex_sub():
+    sent = 'Agent Alice gave Agent Hannah a letter'
+    namesRegex = re.compile('[A|a]gent \w+')
+    print(namesRegex.findall(sent))
+    print(namesRegex.sub('N/A', sent))
+    namesRegex = re.compile('[A|a]gent (\w)\w*')
+    print(namesRegex.findall(sent))
+    print(namesRegex.sub(r'Agent \1***', sent))
+    phoneRegex = re.compile(
+        '''
+        (\d\d\d-)|   # area code w/o() w/dash 
+        (\(\d\d\d\) )  # or area code w() w/o dash
+        \d\d\d
+        -
+        \d\d\d\d
+        \sx\d{2,4}    #extension like x1234
+        ''', re.VERBOSE | re.IGNORECASE | re.DOTALL
+    )
+
 
 def main():
     print('we\'re in main')
@@ -184,14 +229,9 @@ def main():
     lyrics = '12 Drummers Drumming, 11 Pipers Piping, 10 Lords a Leaping, \
     9 Ladies Dancing, 8 Maids a Milking, 7 Swans a Swimming, 6 Geese a Laying, \
     5 Golden Rings, 4 Calling Birds, 3 French Hens, 2 Turtle Doves, and 1 Partridge in a Pear Tree'
-    xmasRegex = re.compile(r'\d+\s\w+')
-    print(xmasRegex.findall(lyrics))
-    vowelRegex = re.compile(r'[aeiouAEIOU]')
-    print(vowelRegex.findall(lyrics))
-    vowelRegex = re.compile(r'[aeiouAEIOU]{2}') #2 vowels in a row lEAping
-    print(vowelRegex.findall(lyrics))
-    notVowelRegex = re.compile(r'[^aeiouAEIOU]')
-    print(notVowelRegex.findall(lyrics))
+    regex_character_classes(lyrics)
+    regex_dotstar(lyrics)
+    regex_sub()
 
 
 if __name__ == '__main__':
