@@ -157,6 +157,19 @@ def regex_find_all(message):
     groups3 = phoneRegex3.findall(message)  # return a list of all matches in message
     print(groups3)
 
+
+def regex_character_classes(message):
+    '''
+    \d - any digit
+    \D - any NON digit
+    \w - any letter, digit, or underscore
+    \W - anything NOT (above)
+    \s - any space, tab, newline
+    \S - any NON type-of-whitespace
+
+
+    '''
+
 def main():
     print('we\'re in main')
     num1 = '656-435-3452'
@@ -168,6 +181,18 @@ def main():
     regex_groups(message)
     regex_greedy_nongreedy_matching(message)
     regex_find_all(message)
+    lyrics = '12 Drummers Drumming, 11 Pipers Piping, 10 Lords a Leaping, \
+    9 Ladies Dancing, 8 Maids a Milking, 7 Swans a Swimming, 6 Geese a Laying, \
+    5 Golden Rings, 4 Calling Birds, 3 French Hens, 2 Turtle Doves, and 1 Partridge in a Pear Tree'
+    xmasRegex = re.compile(r'\d+\s\w+')
+    print(xmasRegex.findall(lyrics))
+    vowelRegex = re.compile(r'[aeiouAEIOU]')
+    print(vowelRegex.findall(lyrics))
+    vowelRegex = re.compile(r'[aeiouAEIOU]{2}') #2 vowels in a row lEAping
+    print(vowelRegex.findall(lyrics))
+    notVowelRegex = re.compile(r'[^aeiouAEIOU]')
+    print(notVowelRegex.findall(lyrics))
+
 
 if __name__ == '__main__':
     main()
