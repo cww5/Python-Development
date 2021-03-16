@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210316 - extract emails and phone numbers for specific regex">
+    <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210316 - copy emails and phone numbers back to clipboard">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/phoneNumberExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/phoneNumberExtractor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615906570238</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="20210316 - copy emails and phone numbers back to clipboard">
+      <created>1615907389690</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615907389690</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +246,7 @@
     <MESSAGE value="20210315 - almost finished regex notes" />
     <MESSAGE value="20210316 - created functions to get email/phone numbers from text" />
     <MESSAGE value="20210316 - extract emails and phone numbers for specific regex" />
-    <option name="LAST_COMMIT_MESSAGE" value="20210316 - extract emails and phone numbers for specific regex" />
+    <MESSAGE value="20210316 - copy emails and phone numbers back to clipboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="20210316 - copy emails and phone numbers back to clipboard" />
   </component>
 </project>
