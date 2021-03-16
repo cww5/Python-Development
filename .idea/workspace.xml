@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210316 - created functions to get email/phone numbers from text">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210316 - extract emails and phone numbers for specific regex">
       <change beforePath="$PROJECT_DIR$/phoneNumberExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/phoneNumberExtractor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615905498079</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="20210316 - extract emails and phone numbers for specific regex">
+      <created>1615906570238</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615906570238</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +237,7 @@
     <MESSAGE value="20210315 - Notes on character classes" />
     <MESSAGE value="20210315 - almost finished regex notes" />
     <MESSAGE value="20210316 - created functions to get email/phone numbers from text" />
-    <option name="LAST_COMMIT_MESSAGE" value="20210316 - created functions to get email/phone numbers from text" />
+    <MESSAGE value="20210316 - extract emails and phone numbers for specific regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="20210316 - extract emails and phone numbers for specific regex" />
   </component>
 </project>

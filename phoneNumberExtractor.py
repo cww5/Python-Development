@@ -51,6 +51,18 @@ def get_emails_from_text(text, email_regex):
     return email_list
 
 
+def put_numbers_emails_to_clipboard(numbers, emails):
+    if len(numbers) > 1:
+        numbers_string = ','.join(numbers)
+    else:
+        numbers_string = str(numbers[0]) + ','
+    if len (emails) > 1:
+        emails_string = ','.join(emails)
+    else:
+        emails_string = str(emails[0])
+    pyperclip.copy(numbers_string + emails_string)
+
+
 def main():
     copied_text = get_text_from_clipboard()
     print(copied_text)
@@ -59,7 +71,7 @@ def main():
     print(all_numbers)
     all_emails = get_emails_from_text(copied_text, email_regex)
     print(all_emails)
-
+    put_numbers_emails_to_clipboard(all_numbers, all_emails)
 
 if __name__ == '__main__':
     main()
