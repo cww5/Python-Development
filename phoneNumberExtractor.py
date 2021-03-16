@@ -37,8 +37,6 @@ def create_phone_email_regex():
         )
         ''', re.VERBOSE
     )
-    # phone_number_regex = re.compile(r'\(\d{3}\) \d{3}-\d{4}')
-    email_address_regex = re.compile(r'([a-z|A-Z]|[0-9]|_)*\@[a-zA-Z]+\.[a-z]+')
     email_address_regex = re.compile(r'[a-zA-Z0-9_.]+@[a-zA-Z0-9]+\.[a-z]+')
     return phone_number_regex, email_address_regex
 
@@ -55,14 +53,14 @@ def get_emails_from_text(text, email_regex):
 
 def put_numbers_emails_to_clipboard(numbers, emails, to_copy=False):
     if len(numbers) > 1:
-        numbers_string = ','.join(numbers)
+        numbers_string = '\n'.join(numbers)
     else:
-        numbers_string = str(numbers[0]) + ','
+        numbers_string = str(numbers[0]) + '\n'
     if len (emails) > 1:
-        emails_string = ','.join(emails)
+        emails_string = '\n'.join(emails)
     else:
-        emails_string = str(emails[0])
-    print(numbers_string, emails_string)
+        emails_string = str(emails[0]) + '\n'
+    print(numbers_string + emails_string)
     if to_copy:
         pyperclip.copy(numbers_string + emails_string)
 
