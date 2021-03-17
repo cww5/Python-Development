@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210316 - changed , to \n for copy separator">
-      <change afterPath="$PROJECT_DIR$/filesnotes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filesnotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/filesnotes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
