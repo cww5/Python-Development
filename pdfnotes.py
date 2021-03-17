@@ -33,7 +33,7 @@ def combinepdfs():
 
 def main():
     pdfwork()
-    combinepdfs()
+    #combinepdfs()
 
 
 if __name__ == '__main__':

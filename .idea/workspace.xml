@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38aa7112-6fa7-4d19-bc80-37f9d507dd7f" name="Default Changelist" comment="20210316 - changed , to \n for copy separator">
-      <change afterPath="$PROJECT_DIR$/Data/example.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/meetingminutes1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/meetingminutes2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/newfile.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/excelwork.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pdfnotes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Python-Development.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python-Development.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filesnotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/filesnotes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfnotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdfnotes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +40,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../convert-bank-statement-to-expense-report" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager" selected="Python.pdfnotes">
