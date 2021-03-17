@@ -2,6 +2,7 @@
 # working with files / paths
 import os
 import shelve
+import shutil
 
 
 def files_notes():
@@ -47,6 +48,26 @@ def shelve_file_creation():
 
 
 def create_simple_file():
+    f = open('Data\\sample.txt', 'w')
+    f.write('This is a test file.')
+    f.close()
+    print('Test file created.')
+
+
+def copy_file_from_to(source, dest):
+    shutil.copy(source, dest)
+
+
+def copy_folder_from_to(source, dest):
+    # recursive copy
+    shutil.copytree(source, dest)
+
+
+def move_folder_from_to(source, dest):
+    # same as linux mv command
+    # this does move but also rename
+    shutil.move(source, dest)
+
 
 def main():
     print()
@@ -54,7 +75,9 @@ def main():
     my_folder = os.path.abspath('..\\')
     get_file_sizes(my_folder)
     get_file_sizes()
-    shelve_file_creation()
+    # shelve_file_creation()
+    # create_simple_file()
+    # copy_file_from_to('Data\\sample.txt', 'Data\\sample_copy.txt')
 
 
 if __name__ == '__main__':
